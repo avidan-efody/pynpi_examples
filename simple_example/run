@@ -1,4 +1,4 @@
 #!/bin/sh
-$VCS_HOME/bin/vlogan -full64 -sverilog simple_example/top.v
-$VCS_HOME/bin/vcs -full64 -debug_access work.top
-./simv -ucli -do simple_example/dump.cmd
+$VCS_HOME/bin/vlogan -full64 -kdb -sverilog -cm cond+tgl+line+fsm simple_example/top.v
+$VCS_HOME/bin/vcs -full64 -kdb -sverilog -debug_access -cm cond+tgl+line+fsm work.top
+./simv -cm cond+tgl+line+fsm -ucli -do simple_example/dump.cmd 
